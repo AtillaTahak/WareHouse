@@ -1,0 +1,12 @@
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\bin\Debug\DepoProjesi.exe.config
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\bin\Debug\DepoProjesi.exe
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\bin\Debug\DepoProjesi.pdb
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.csprojAssemblyReference.cache
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.frmMain.resources
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.Properties.Resources.resources
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.csproj.GenerateResource.cache
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.csproj.CoreCompileInputs.cache
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.exe
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.pdb
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.girisAdmin.resources
+C:\Users\Atilla\Desktop\odev\DepoProjesi\DepoProjesi\obj\Debug\DepoProjesi.adminPanel.resources
