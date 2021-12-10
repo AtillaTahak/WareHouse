@@ -29,3 +29,20 @@ In the gridfill method, we also filled the total cost and total sales labels in 
 
 *I wrote a method for the control with the same name in the adminPanel, then I changed the Enable property of the textBox, where I got the product name in the textBox, instead, and made it false, so I made it work like a label.
 *As I used in Form1, I provided controls in this event so that textual expressions are not entered in the KeyPress Events of the textboxes where I receive numeric data.
+
+
+## Authors
+
+👤 **ATİLLA TAHA KÖRDÜĞÜM**
+
+- GitHub: [@AtillaTahak](https://github.com/AtillaTahak)
+- Twitter: [@AtillaTahaa](https://twitter.com/AtillaTahaa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/atilla-taha-kördüğüm-a93702186/)
+- Blog: [Blog](atillataha.blogspot.com)
+- Youtube: [YouTube](https://www.youtube.com/channel/UCmoD0x4Z9vdG2PCsI5p8FYg)
+
+## Acknowledgments
+-Thanks to Microverse
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
