@@ -1,31 +1,31 @@
-# DepoProjesi
-Depo ve stok takip etmek için yazılmış basit bir uygulama 
+# WarehouseProject
+A simple application written to track warehouse and stock
 
-* System.Data.SqlClient sınıfı kullanarak daha sonra işimize lazım olacak sınıflarımızı tanımladık 
+* Using the System.Data.SqlClient class, we defined our classes that we will need later on
 SqlConnection
 SqlDataAdapter
-DataSet 
+DataSet
 SqlCommand
 
-*Programımız Açıldığında direk grid dolmasını istediğimiz için Forum Load Kısmına bir gridDoldur diye bir metot oluşturduk geriye değer döndürmeyeceği için bu metodumuzu void olarak tanımladık burada sqlConnection sınıfımızı tanımladık ve connectStringimizi yazdık dataAdapter sınıfıza çalışak sorgumuzu ve bağlantı bildiğilerimizin olduğu SqlConnection sınıfından oluşturduğumuz connection değişkenmizi gönderdik dataSet ile gridview'imizin sourcesine istediğimiz UrunListesi tablosunu gönderdik 
-gridDoldur metodunda aynı zamanda projemizde olan toplam maliyet ve toplam satış labellerini doldurduk gridte ve tabloda yaptığımız her değişiklikte bu ikisi değişeceği için aynı metotda olması daha mantıklı olarak gördüm 
+*Since we want the grid to be filled directly when our program is opened, we created a method called GridFill in the Forum Load Section, since it will not return any value, we defined this method as void, here we defined our sqlConnection class and wrote our connectString. We have sent the desired ProductList table to the sources of our .
+In the gridfill method, we also filled the total cost and total sales labels in our project, as these two will change every time we change the grid and table, I thought it more logical to use the same method.
 
-*Tablomuzda aynı isimli ürün olmasını istemedim düzenle ve ürün çıkışında herhangi bir karışıklık olmaması için aynı ürün kontrolunu sağlayabileceğim bir method oluşturdum 
+*I didn't want to have the same name product in our table, I created a method where I can control the same product so that there is no confusion in the product output.
 
-*Baglantı açma işlemini her sorguda tekrar connecstring belirtmeme adına bir baglantiAc diye void türünde bir method oluşturdum 
+*In order not to specify the connecstring again in every query, I created a void type method called a connectionAc.
 
-*Formumun anasayfasında sadece ürün girişi olmasını istedim bunun için label ve textboxlar ile formumun tasarımını yaptım UrunAdet, UrunMaliyet , UrunSatis için oluşturduğum textboxları sadece sayı girilmesini istediğim için textbox'un KeyPress eventine bu olayları kontrol edip bu textBoxların hiç harf almamasını sağladım 
+*I wanted only product entry on the homepage of my form, so I designed my form with labels and textboxes. The textboxes I created for ProductAdet, Product Cost, ProductSatis were only required to be entered in numbers, so I checked these events in the KeyPress event of the textbox and ensured that these textBoxes did not receive any letters.
 
 
-*Formum Tasarımda en alta admin giriş butonu koydum bu buttona tıklandığında girisAdmin diye oluşturduğum form'un showdialog ile gösterdim burada showdialog seçme sebebim show ile gösterdiğimiz zaman alta ki forma ulaşım sağlanabiliyordu bunu istemediğim için showdialog ile gösterdim 
+*I put an admin login button at the bottom of my Form Design. When this button is clicked, I showed the form I created as loginAdmin with showdialog. Here, the reason for choosing showdialog is that when we show it with show, the form below can be accessed.
 
-*girisAdmin formu için dataAdapter ile bir sorgu çalıştırdım bu sorguda kullanıcı adı ile şifresini tablomuzda olup olmadığını gösteren bir sorgu idi eğer kullanıcı var ise sorgumuz çalışacak ve DataTable sınıfından oluşturduğumuz dataTable değişkenimiz içi dolacak ve ilk satırında  1 değerini getirecek bunu kullanarak bir if satırında kontrolunu sağladım 1 değer geldiği zaman adminPanel formunu yine showDialog ile göstermesini istedim 
+*I ran a query with dataAdapter for the loginAdmin form. I wanted it to show the adminPanel form again with showDialog when the value comes.
 
-*adminPanel formun tasarımı için burada ürün çıkışı, ürün silme, üründüzenleme ve grid alanlarının olmasını istedim bunun için ürün düzenlemede ürün id'si ile arama yaparak arama yaptığımız ürünün verilerinin ürün düzenleme için oluşturduğum textbox'lara olan değerlerine atadım güncelle metodu ile textboxta ki verileri update sql sorgusu ile tablomuza aktardım buradan yine boş değer gönderilmemesi için textboxların boş olup olmadığını kontrol ettim 
+*For the design of the adminPanel form, I wanted product output, product deletion, product editing and grid areas to be here, for this, I assigned the values ​​of the product data we searched to the textboxes I created for product editing by searching with the product id in the product arrangement, with the update method, the data in the textbox was updated. I transferred it to our table with a sql query, and here I checked whether the textboxes are empty so that no empty values ​​are sent.
 
-*adminPanelinde yine gridDoldur metodunu ve bu metodun içinde label dolurması için gereken kodları kullandım 
+*I used the gridFill method in the adminPanel and the codes required to fill the label in this method
 
-*adminPanelinde Ürün çıkışı için comboBox kullandım farklı elementler kullanarak daha göze güzel gelip ve kullanışlı olması comboBoxda ürünlerin isimleri formLoad'da doldurulması için bir metor yazdım ComboboxDoldur adında burada select sorgusunu kullanarak UrunListesinde ki UrunAd'larını aldım ve dataRead'ı bir while döngüsünde butun verileri aldım bu metotda her değişiklikte güncellemesini istediğim için method olarak oluşturdum ve Ürün Çıkışı ve Ürün Silmesi de ikisi içinde comboBoxlar dolmasını sağladım 
+*I used a comboBox for Product output in the adminPanel, it is more pleasing to the eye and useful by using different elements. Since I want this method to update every time I change it, I created it as a method and I have the ComboBoxes filled in both Product Output and Product Deletion.
 
-*adminPanelinde Aynı isimli kontrolu için metot yazdım sonra onun yerine textBoxda ürün adını aldığım textBox'ın Enable özeliğini değiştirip false yaptım bu şekilde bir nevi label gibi çalışmasını sağladım 
-*Form1 de kullandığım gibi burada da sayısal verileri aldığım textboxların KeyPress Event'lerine metinsel ifade girilmemesi için bu eventte kontroller sağladım 
+*I wrote a method for the control with the same name in the adminPanel, then I changed the Enable property of the textBox, where I got the product name in the textBox, instead, and made it false, so I made it work like a label.
+*As I used in Form1, I provided controls in this event so that textual expressions are not entered in the KeyPress Events of the textboxes where I receive numeric data.
